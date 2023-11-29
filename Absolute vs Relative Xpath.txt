@@ -1,0 +1,11 @@
+Absolute Xpath 	 	| 	Relative Xpath
+____________________________ |______________________________________
+			|
+1) Path of the Element from 	| 1)Path of Element from any Child
+    root of the document	|
+2) Applied using ' / '		| 2) Applied using ' // '
+3)Lengthy			| 3) Short
+4)It consumes more time	| 4) It consumes less time to find the path                                              
+    to find the path of Web-	|    of the WebElement.
+     Element                                         |	
+ ____________________________|______________________________________

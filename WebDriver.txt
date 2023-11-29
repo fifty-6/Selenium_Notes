@@ -1,0 +1,40 @@
+WebDriver is an Interface which is used to control the browsers.
+It is the core Interface
+There are 11 Abstract Methods-
+1)get()
+2)getTitle()
+3)getCurrentURL()
+4)getPageSource()
+5)getWindowHandle()
+6)getWindowHandles()
+7)close()
+8)quit()
+9)manage()
+10)Navigate()
+11)switchTo()
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Navigate()-It is used to provide the browser history navigation
+	It will provide direction in three ways-
+			1)Backward
+			2)Forward
+			3)Refresh
+Return type- NAVIGATION
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SwitchTo() - 	
+	 It is used to transfer the driver control/mouse control from -
+					1)One window to another window
+					2)One tab to another tab
+					3)One frame to another frame
+Return type - STRING
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+getTitle- 
+	It is used to get the tittle of the current webPage
+
+Return type- STRING
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+getCurrentUrl-
+	It is used to get the URL of the current webpage.
+Return type- STRING
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

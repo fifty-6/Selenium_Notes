@@ -1,0 +1,8 @@
+    getWindowHandle 	        |	getWindowHandles
+
+1)It generates id of Only parent             1)It generates id of Parent and child
+   window
+
+2)String			        |     2) Set<String>
+
+3)It genrates only one Id	        |     3)It generates multiple Ids

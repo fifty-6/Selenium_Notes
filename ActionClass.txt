@@ -1,0 +1,65 @@
+Actions Class
+======================================
+-It is a concrete class from Selenium
+-Its is used to perform  Mouse gestures
+- It has 21 Methods
+
+Steps-
+----------
+1.Create the object of ction class
+2.In Actions constructor pass webdriver reference
+3.call  methods of action class
+4.call Perform()
+
+METHODS()
+--------------------
+
+1)Click()
+2)Click(WebElement target)
+3)DoubleClick()
+4)DoubleClick(WebElement)
+5)ContextClick()    ------------------------ (Rightclick)
+6)ContextClick(WebElement Target)
+7)SendKeys(CharSequence)
+8)SendKeys(CharSequence,WebElement)
+9)Perform()
+10)build()
+11)KeyUp()
+12)KeyDown()
+13)Drag&Drop()
+14)drag&DropBy()
+15)MoveToElement(WebElement target)
+16)MoveByOffset(intXoffset,intYoffset)
+17)MoveToElement(WebElement,intXoffset,intYoffset)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+moveToElement(WebElement targeted)
+-Move the mouse over to the targeted Element.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+contextClick()
+-RightClick anywhere on the webpage Randomly
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+contextClick(WebElement target)
+-RightClick on a targeted Element
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+click()
+-Clicks randomly on the webpage
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+click(targeted Web Element)
+-clicks on the targeted webElement
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+doubleClick()
+-doubleClick anywhere on the webpage
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+doubleClick(targetedd WebElement)
+-doubleclicks on the targeted Element
+
+
+

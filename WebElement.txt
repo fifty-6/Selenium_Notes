@@ -1,0 +1,146 @@
+Web Element- Anything which is present in ViewPort(visable Area) Area of webpage.
+
+Why?
+-To perform the action on the WebPage like-
+
+
+WebElement have 14 methods-
+1)click()
+2)clear()
+3)sendKeys()
+4)getText()
+5)getAttribute()
+6)getCssValue()
+7)getSize()
+8)getLocation()
+9)getRect()
+10)getTagName()
+11)isEnable() 
+12)isSelected() 
+13)isDisplayed() 
+14)submit()
+
+Does-
+
+1)Click()- 
+	i)clicking
+	ii)Scrolling (if the webelement is closer to the viewarea but not visable..it will do scrolling but not if the WebElement is far.
+	iii)It is Universal and doesnt gave any conditon
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+WebElement- We can only use Get Method in WebElement.
+WebDriver- We can user both get & size in WebDriver. It would give hight and width of the web page. 
+
+2) getSize()     -It will give the Element height and width with getSize.
+	
+	-return Type- Dimension
+	-get Height & width of Element.
+
+//webdriver -getPosition- gives Start x and y value of the window
+webElement-getLocation- 
+	-return type- Point
+	-get Start x an y value
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+3) getRect()
+	-returnType- Rectangle
+	-gets height,width,start x & start y of a webElement
+
+Note-instead of getlocation() and getSize() use getRect()
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+4) isDisplayed()
+-It is used to check weater the webElement is displayed on the webPage
+-Return Type of isDisplay is:     Boolean
+
+-if a  webElement is hidden it will return false.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+5) isSelected()
+-Its is used to check weather the WebElement is selected(Checked) or not .
+-Its return Type is BOOLEAN
+Condition- Its only works for CheckBox or Radio Button
+- Default value of isSelected is FALSE for non CheckBox or Radio Button.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+6) isEnable()
+-It is used to check if an Element is Enable or not
+-If element is Enable then we use selenium 
+-If element is Disable then we must use JavaScript.
+-Return Type is BOOLEAN.
+-Selenium cannot be used for disabled Element.
+-The Default Value if the Element is not having a Tagname <Input> or <button> is TRUE. 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+7) getTagname()
+-its is used to  get the Tagname of an element.
+-Return Type is STRING.
+-We can put  * instead of tagname while writing locator(xpath)..	
+	ex- //*[text()='Register']
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+8) getText()
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+9) getAttribute(Attribute name)
+-return type is String.
+-To get the HTML attribute value of the Attribute name we are passing of the web Element.
+ex-text,placeholder etc
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+10) sendKeys(charSequence)
+-With the help of sendKeys we can perform mutliple operations
+-its is used to pass a value
+-It can perform-
+		-Scrolling Operation
+
+			-pageUp - .sendKeys(Keys.CONTROL+"")
+			-pageDown
+
+		-shortkey (ctrl+a,ctrl+c,ctrl+v)
+			-.sendKeys(Keys.CONTROL+"a");
+
+		-pass a value
+
+		-Click operation
+			sendKeys(Keys.Enter);
+			sendKeys(Enum,Constants);
+
+		-Delete Operation
+			-.sendKeys(Keys.DELETE);
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+11) getCSSValue
+- To get the CSS Attribute value of the webElement.
+ex-background-color,border-radius,color etc
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+12) submit()
+-It is used for clicking Operation
+-it has conditions
+	-it should have tagname called button and type should be "Submit"
+	-the webelement should also be inside a Form Tag
+-if both the above conditons are satisfied then only we can use submit().
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Send keys (Char sequence) Enum-
+ -Keys is an Enum which holds groups of constants
+Timeout related operation- 
+ -Duration
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java-
+  -class
+  -interface
+  -enums
+  -anotation
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+GetLocation- 
+ -Get the starting x and y-axis of an webElement in a WEb
+Return Type- Point
+
+
+
+
+
+
+

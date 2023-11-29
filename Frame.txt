@@ -1,0 +1,22 @@
+FRAME
+	
+-It is embeded Webpage(Webpage inside another webpage is called Frame)
+-to design the frame we wwill be using <iframe></iframe>
+
+To transfer the control from parent to child frame-
+-c.switchTo().frame(int index)- locate the frame with index value
+-c.switchTo().frame(String Id or name)- if the <iframe></iframe> has a ID or NAME then only it will be used
+-c.switchTo().frame(WbElement target)- If neither ID nor NAME is present we have to use this method
+
+-if i rightClick on the frame we get extra two elements
+	-Reload frame
+	-view Frame Source
+
+How to analize - the parent or ansister will contain <iframe></iframe>
+
+<iframe>
+	<html>
+		<head></head>
+		<body></body>
+	</html>
+</iframe>

@@ -1,0 +1,19 @@
+SearchContext- 1)FindElement()
+	            2)FindElements()
+
+
+Locator- It is a search criteria which is used to search webelements on a Webpage.
+
+Types of Locators/Selectors-
+
+1. id                                     -Best for FindElement()
+2. name		    -Best for FindElement()
+3. className	    -Best for FindElements()
+4. tagName	    -Best for FindElements()
+5. linkText.	    -If the WebElement is a Link
+6. partialLinkText	    -If the WebElement is a Link
+7. CSS selector	    -These are the expressions
+8. X-path		    -These are the expressions
+
+
+By- By is an abstract class which holds all the locators.

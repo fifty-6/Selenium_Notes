@@ -1,0 +1,66 @@
+NoTE- If the attribute of an element isi completly dynamic(Only Number)
+
+CSS = 	When-Used when the webelement is not having id,name,class and it is not a link also
+	What- It is a query language which is used to search an Element or group of Elements in the webpage.In selenium it is a 	Locator.
+	How- With the help of  Syntax- 		
+				tagname[Attribute_Name='Attribute_Value']
+
+	Drawback- 1)This CSS concept doesnt apply for TEXT.If the Element consists of only text it will not support
+		   2)BackWard Traversing is not possible.
+	Advantage- 1)It is faster than XPATH
+
+_________________________________________________________________________________________________________________________
+find Duplicate of TAGNAME= //tagname
+find Duplicate of attribute = tagname[Attribute_Name = 'Attribute_Value']
+_________________________________________________________________________________________________________________________
+
+XPATH= 
+	what- Its is called XMLPath
+	          - It is a query language which is giving the address of the Element
+	          - Two Types -1) Relative XPATH
+		              -2) Absolute XPATHs
+
+XPATH by text= //tagname[text()='TextValue']
+
+XPATH by group id= (//tagname[text()='TextValue'])[index number]
+
+Xpath by attribute = //tagname[@Attribute Name='Attribute Name']
+
+Xpath by Contains= //tagname[contains(text(),'Partial textValue')]-------------- for Text
+		//tagname[contains(@AttributeName,'AttributeValue')]
+
+Independent & Dependent Xpath=
+
+	1) Identify which is fixed and which is dynamic element.
+
+	2) Write the xpath for Fixed Element.
+
+	3) Update the xpath by backward traversing (/..) to find common parent between Fixed Element & Dynamic Element.
+
+	4) Update the xpath by writting Xpath for Dynamic Element.
+
+Xpath by Axes=
+	- FixedElement/axesname:: Tagname[Predicate or Conditions]
+
+Corelative Xpath=
+	A - //div[1]/input[1]
+	B - //div[1]/input[2]
+	C - //div[2]/input[2]	
+	D - //div[2]/input[2]
+	AB - //div[1]/input
+	CD - //div[2]/input
+	AC - //input[1]
+	BD - //input[2] 
+	ABCD - //input
+	AD -//div[1]/input[1]|//div[2]/input[2]	
+	BC - //div[1]/input[2]|//div[2]/input[1]
+
+
+
+AND OR NOT operation-
+
+And = //tagname[@Attribute Name='Attribute Name' and @Attribute Name='Attribute Name']
+
+Or =   //tagname[@Attribute Name='Attribute Name' and @Attribute Name='Attribute Name']
+
+Not= 

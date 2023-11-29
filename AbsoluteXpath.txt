@@ -1,0 +1,55 @@
+ABSOLUTE XPATH-
+-It is a Xpath where we have to write Path of the Element/Address of the Element from the Root.
+- It is very Lengthy
+-It consumes more time to find path of the Element 
+-Applied using ' / '.
+
+. = Current Project
+/ = Immidiate Child
+//= AnyChild
+[ ]= index value which starts from '1'
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Absolute</title>
+</head>
+<body>
+	<div>
+		<input type="text" value="A">
+		<input type="text" value="B">
+	</div>
+	<div>
+		<input type="text" value="C">
+		<input type="text" value="D">
+	</div>
+
+</body>
+</html>
+
+input A= html/body/div[1]/input[1]
+input B= html/body/div[1]/input[2]
+input C= html/body/div[2]/input[1]
+input D= html/body/div[2]/input[2]
+input A,B,C,D= html/body/div/input
+
+Combination  of  2 -
+input A,B= html/body/div[1]/input
+input C,D= html/body/div[2]/input
+input A,D=html/body/div[1]/input[1]|html/body/div[2]/input[2]
+input B,C=html/body/div[1]/input[2]|html/body/div[2]/input[1]
+
+Combination of  3 -
+input ABC = html/body/div[1]/input|html/body/div[2]/input[1]
+input ABD = html/body/div[1]/input|html/body/div[2]/input[2]
+input BCD = html/body/div[1]/input[2]|html/body/div[2]/input
+input BDA = html/body/div[1]/input|html/body/div[2]/input[2]
+input CDA = html/body/div[2]/input|html/body/div[1]/input[1]
+input DAB = html/body/div[2]/input[2]|html/body/div[1]/input
+input DBC = html/body/div[2]/input|html/body/div[1]/input[2] 

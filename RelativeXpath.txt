@@ -1,0 +1,33 @@
+Relative Xpath : Writting the xpath from any child of the document
+
+Its is representated with the "//".
+-it is very Short
+-in real time we  are going to use the relative Xpath
+
+Syntax                                          Relative Xpath
+
+1.Xpath by Attribute               //tagname[@Attribute='Attribute value']
+2.Xpath by text                       //tagname[text()='text value']
+3.Xpath by contains
+	-for text :		//tagname[contains(text(),'partial textValue')]  
+	-for attributes : 	//tagname[contains(@AttributeName,'Partial Attribute value')]
+4.Xpath by GroupIndex : 	(xpath)[index_value]
+5.Xpath by axis  		//FixedElement/axisname::tagname[Predicate or Condition]
+
+
+There are 7 types of Relative xpath
+1.Core-relative xpath
+2.Xpath by attribute
+3.Xpath by text
+4.Xpath by contains
+5.Independent and dependent
+6.Group index
+7.Axis
+
+
+Steps of Independent & Dependent Xpath-
+
+1.Identify which is fixed Element & Dynamic Element
+2.Write the Xpath for Fixed Element
+3.update the xpath by backward traversing (/..) to find the common parent between Fixed Element &  Dynamic Element.
+4.Update the Xpath by writting Xpath for Dynamic Element 

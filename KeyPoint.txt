@@ -1,0 +1,6 @@
+KeyPoints
+
+. = CurrentProject
+/=immidianteChild
+//=AnyChild
+[ ] =IndexValue  starts from '1'
