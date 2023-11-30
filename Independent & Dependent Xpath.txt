@@ -1,0 +1,72 @@
+Independent Xpath: When an Element is Fixed and not dynamic we call it as a Independent Xpath
+
+Dependent Xpath: When as Element is constantly changing or might change in the future or the WebElement is having complete Dynamic Value is  we call it as a dependent Element.
+
+How to write Xpath for Dynamic Element steps-
+
+1) Identify which is fixed and which is dynamic element.
+
+2) Write the xpath for Fixed Element.
+
+3) Update the xpath by backward traversing (/..) to find common parent between Fixed Element & Dynamic Element.
+
+4) Update the xpath by writting Xpath for Dynamic Element.
+
+
+Example-
+
+IRCTC
+
+1)Tourism  ------FixedElement
+tourism@irctc.com  ------DynamicElement
+
+2)//td[text()='Tourism'] ------Xpath for Fixed Element
+
+3)//td[text()='Tourism']/..  ---------------BackWard Traversing to find the common Parent for Fixed and Dynamic Element
+
+4)//td[text()='Tourism']/..//td[@data-title='mail']	 ----------Xpath for Dynamic Element.(We have to write Xpath for Fixed 							Element before writting for the Dynamic element)
+
+
+
+Selenium.dev
+
+1)Java--------------FixedElement
+Stable: 4.12.1 (September 4, 2023)--------------Dynamic Element
+
+2)//p[text()='Java']-----------Xpath for fixed Element
+
+3)//p[text()='Java']/.. -------------Backward traversing untill both Fixed and Dynamic Elements are covered
+
+4)//p[text()='Java']/..//a[@href='https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.12.0/selenium-java-4.12.1.zip']  	--------------------------Xpath for Dynamic Element(Fixed element+Dynamic Element)
+
+
+FlipKart.in
+
+1)APPLE Iphone 15 Pro (Natural Titanium, 1 TB)--------------FixedElement
+    ₹1,84,900------------------------------------------------------------------Dynamic Element
+
+
+2)//div[text()='APPLE Iphone 15 Pro (Natural Titanium, 1 TB)']-----------Xpath for fixed Element
+
+3)//div[text()='APPLE Iphone 15 Pro (Natural Titanium, 1 TB)']/../..   -------------Backward traversing
+
+
+4)//div[text()='APPLE Iphone 15 Pro (Natural Titanium, 1 TB)']/../..//div[@class='_30jeq3 _1_WHN1']  --------------------------Xpath for Dynamic Element(Fixed element+Dynamic Element)
+
+
+@2nd Example
+
+1)realme 11x 5G (Midnight Black, 128 GB)--------------FixedElement
+    ₹14,999------------------------------------------------------------------Dynamic Element
+
+
+2)(//div[text()='realme 11x 5G (Midnight Black, 128 GB)'])[1]-----------Xpath for fixed Element
+
+3)(//div[text()='realme 11x 5G (Midnight Black, 128 GB)'])[1]/../..   -------------Backward traversing
+
+
+4)(//div[text()='realme 11x 5G (Midnight Black, 128 GB)'])[1]/../..//div[@class='_30jeq3 _1_WHN1']  --------------------------Xpath for 							Dynamic Element(Fixed element+Dynamic Element)
+
+
+
+

@@ -1,0 +1,16 @@
+A - //div[1]/input[1]
+B - //div[1]/input[2]
+C - //div[2]/input[2]
+D - //div[2]/input[2]
+AB - //div[1]/input
+CD - //div[2]/input
+AC - //input[1]
+BD - //input[2] 
+ABCD - //input
+AD -//div[1]/input[1]|//div[2]/input[2]	
+BC - //div[1]/input[2]|//div[2]/input[1]
+ABC- //div[1]/input|//div[2]/input[1]
+BCD- //div[1]/input[2]|//div[2]/input
+CDA- //div[2]/input|//div[1]/input[1]
+DAB- //div[2]/input[2]|//div[1]/input
+ABD- //div[1]/input|//div[2]/input[2]

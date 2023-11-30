@@ -1,0 +1,9 @@
+Xpath by Contains
+
+-It has more advantage than anyOther xpaths.
+-It is used most of the time in market.
+-When we have to pass partial Attribute or Partial Text value we use Xpath by Contains
+
+Syntax- 	//tagname[contains(text(),'Partial Text value')] ----------- For Text
+
+                	//tagname[contains(@Attribute name,'Partial Attribute value')]-----For Attribute

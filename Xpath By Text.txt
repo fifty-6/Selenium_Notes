@@ -1,0 +1,9 @@
+Xpath by Text
+
+- Always Give priority for Xpath by text
+- It is Case Sensitive
+- Complete text should be passed
+- It supports Linktext as well as Text
+- We cannot pass partial Text value
+- Xpath by text wont support if the text have nonBreakableText(ex-' yes ','Hello I m sanket  '. If space is removed it wont support)
+- When text is a Partially Dynamic text Xpath by text wont support.

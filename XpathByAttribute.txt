@@ -1,0 +1,22 @@
+Xpath by Attribute
+And Operation
+//input[@value='A' and @type='text']======A
+
+Or Operation
+//input[@value='B' or @type='submit']=========BAbutton
+
+
+//input[@type='submit']==========A button
+//input[@value='B']
+//input[@type='text]=============A&B
+//input[@value='A']=============A & Abutton
+
+
+not operation
+
+//input[not(@type='text')]======================A button
+//input[not(@value='A')]=======================B
+//input[not(@type='submit') and @value='A']======A
+//input[not(@value='B')]=======================A & A button
+//input[not(@type='submit')]====================A&B
+//input[not(@type='text') or not(@value='A')]======B & A button

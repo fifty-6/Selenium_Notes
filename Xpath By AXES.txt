@@ -1,0 +1,2 @@
+5)XPATH BY AXES:
+		- FixedElement/axesname:: Tagname[Predicate or Conditions]
