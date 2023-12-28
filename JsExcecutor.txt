@@ -1,0 +1,99 @@
+
+JavaScript Executor-
+
+-When the WebElement is disabled then selenium methods wont work so we use JSExecutor to perform action on the webElement
+-It is mainly used for scrollinng operation in selenium
+-JavaScript PopUps are not inspectable
+
+Main two methods of JSE- 	1)executeSyncScript()   ----------	to Execute Syncronized JS
+			2)executeAsyncScript() ----------	to Exceute Asyncronized JS
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ExecuteSyncScript- 
+	Return Type- OBJECT
+	executeSyncScript/executeScript(String,[object])
+	-we can perform tasks only with String-
+		-scrolling
+		-popups
+	-if the Element is disabled then Object is required
+Scrolling-
+	Top to Bottom= +ve value
+	Bottom to Top= -ve value
+	Left to Right= +ve value
+	Right to Left= -ve value
+
+
+
+Popups example-
+	1) c.executeScript("window.alert('Good Morning')");
+	2)c.executeScript("window.confirm('Good Morning ?')");
+	3)c.executeScript("window.prompt('Kitne aadmi the ?')");
+
+Scrolling Example- (values will be assigned ini the form of pixel)
+	1)c.executeScript("window.scrollBy(0,1000)");	 {Virtical Scrolling- Top to Bottom}
+	2)c.executeScript("window.scrollBy(1000,0)");	{Horizontal Scrolling- Left to Right}
+
+
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For performing Scrolling operation - ScrollBy()
+			         - ScrollTo()
+	
+When- When the Selenium methods are not working/DISABLED, we use jsExcutor methods.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Objects In JAVASCRIPT-
+
+	-In JS two Objects are there 
+		1)Document
+		2)Window 		{Default Object}
+	-It is a programming language
+	-It is a caseSensitive Language
+	-we Can generate popups with the help of js in the webpage
+	
+Types of popups-	
+			1)Alert popup		(Only OK button will be there)
+			2)confirmation popup	{OK & CANCEL will be there}
+			3)prompt popups		{OK, CANCEL & TEXT FIELD will be there}
+			4)JS popups (Blocker popup)-----------------------{if not responded to the popup it will block execution}
+scrollBy-
+
+
+scrollTo()- Used to scroll all the way to the Bottom,Top,Left,Right
+
+	Ex-	
+		By PIXEL
+
+		#TOP TO BOTTOM
+		c.executeScript("window.scrollTo(0,600)");
+		
+		#BOTTOM TO TOP
+		c.executeScript("window.scrollTo(0,-400)");
+
+		ALLTHE WAY 
+		
+		#SCROLL TO BOTTOM
+		c.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+		
+		#SCROLL TO TOP
+		c.executeScript("window.scrollTo(0,-document.body.scrollHeight)");
+		
+		#SCROLL TO RIGHT
+		c.executeScript("window.scrollTo(document.body.scrollWidth,0)");
+		
+		#SCROLL TO LEFT
+		c.executeScript("window.scrollTo(-document.body.scrollWidth,0)");
+
+
+
+
+To Work With Desabled element- Buildin variable-  arguments
+
+arguments- It is in the form of array and he index value starts from 0
+
+To work on Disabled eelement we need both 
+	ex- 
+	WebElement tf=c.findElement(By.cssSelector("input[class='form-control']");
+
+	c.executeScript (string,object)
+	c.executeScript("argument[0].value='Sanket' ",tf);	

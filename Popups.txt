@@ -1,0 +1,66 @@
+POPUPS
+There are 5 types of popups
+1)JavaScript Popup				-By Selenium webDriver
+2)Hidden Division Popup			-By findElement (the only inspectable popup)
+3)Notification Popup			-By avoiding
+4)Authentication Popup			-By Selenium webdriver
+5)File Upload Popup			-By Third party tool (AutoIT)
+
+To handle the popups we need- Procedure
+
+PROCEDURES-
+1)Check popup is Inspectable or not if it is inspectable Handle it with Find Element
+2)Check any other solution is there in Selenium Webdriver
+3)Check any other solution is there in programming language
+4)Check any other solution is there in any THIRD PARTY TOOL (AutoIT)
+5)Try to avoid the popup
+
+
+We Can use Robot class to handle JavaScript and notification popups
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Notification Popup- 
+
+-This is designed by the developer to get the permission/collect the information from the user to send the notification to the user about updates when the user is not using the site.
+-Its is not a blocker popup
+-It is not inspectable
+-Procedure- 2& 3
+-To handle this popup we have to go for Robot class from java package
+
+For 3rd procedure
+Steps- 	1) Create object of Robot class
+	2) import it from java.awt package
+	3)handle AWTException
+
+WHY ROBOT CLASS?
+Robot class are used to perform mouse actions and keyboard actions
+-mouse action- mouse wheeling (scrolling)
+
+Robot class KEYBOARD methods-
+	1)keyPress(KeyEvent.VK_TAB);
+	2)keyRelease(KeyEvent.VK_TAB);
+*both should be used one after another
+
+VK= VirtualKeys
+Keys-
+	1)KeyEvent.VK_TAB
+	2)KeyEvent.VK_BACK_SPACE
+	3)KeyEvent.VK_DELETE
+	4)KeyEvent.VK_ENTER
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+To Avoid Popups- Disabling popups before launching the browser.
+	*Brower Options Class* is used to avoid notification popup
+Steps-
+	1)ChromeOptions op=new ChromeOptions();		[depending on the browser create object of the browerOptions]
+	    EdgeOptions op=new EdgeOptions();
+	    FirefoxOptions op=new FirefoxOptions();
+
+	2)Import - import org.openqa.selenium.chrome.ChromeOptions;
+	3)op.addArguments(""); 	[String arguments] [To disable the notifications]
+	4)write inside addArguments(" ") ->  --disable-notifications
+
+--disable-notifications- These are fixed arguments and cannot be changed and needs to be written as it is
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Authentication popup- THis is used in private organisations like Banking 
+-Through the url we are going to pass the values-    https://username:password@https://the-internet.herokuapp.com/basic_auth
+					https://admin:admin@the-internet.herokuapp.com/basic_auth
+-we are goiung to use SeleniumDriver method

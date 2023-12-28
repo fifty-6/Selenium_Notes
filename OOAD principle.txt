@@ -1,0 +1,43 @@
+OBJECT ORIENTED ANALYSIS AND DESIGN PRINCIPLE(OOAD)
+
+-we do Upcasting
+	-Upcasting is the process of converting a subclass reference to a superclass reference.
+
+-According OOAD principle-
+	
+	1]   we have to store the object reference inside an interface not inside the class
+	
+		- SearchContext driver=new ChromeDriver)
+			-We can access 2 methods 
+				-findElement()
+				-findElements()
+		
+		TakeScreenshot driver=new ChromeDriver();
+			-We can only access 1 method using TakesScreenshot interface
+				-getScreenshotAs()
+	
+		JavaScriptExecutor driver=new ChromeDriver()
+			-We can access two methods
+				-executeScript()
+				-executeAsyncScript()
+			
+		WebDriver driver=new ChromeDriver();
+			1) We can access total of 13 methods that is why we will be using the WebDriver Interface reference.
+			2) Methods of SearchContext + WebDriver Methods.
+			Methods-
+				1)findElement(null);
+				2)findElements(null);
+				3)get(null);
+				4)getCurrentUrl();
+				5)getTitle();
+				6)getPageSource();
+				7)getWindowHandle();
+				8)getWindowHandles();
+				9)close();
+				10)quit();
+				11)manage();
+				12)navigate();
+				13)switchTo();
+
+			3)We have to do Downcasting to access methods from  JavascriptExecutor & TakeScreenShot
+				

@@ -1,0 +1,102 @@
+Syncronization- It is a process of Matching Automation script , Execution Speed & Application Loading speed
+-WAIT-
+	-Implicitly wait()
+	-Explicitly wait()
+	-Thread.sleep()
+	-Fluent wait
+	-Pageload timeout
+
+Q. what is synchronisation
+Q. what is implicit wait
+Q. what is explicit wait
+Q. difference between implicit 
+
+-Automation Script Speed Is always faster than Application  loading speed.
+-Application loading speed is completely depends on Internet Speed.
+-To match both Automation script Execution speed and application loading speed we have to use the concepts of Wait.
+-As we cannot control Application loading speed we use WAIT concepts to match the Automation script Execution speed to Application loaidng speed.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1] Implicit wait- 
+Once we apply Implicit wait it is going to be applied for the whole class.
+	-c.manage().timeouts().implicitlyWait(Duration.ofSeconds(Duration));(current usage after selenium 4)
+	-c.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);(Old Method ..selenium 3)
+- Its is used for find Element & Find Elements
+-Exception -
+	-NoSuchElementException	(if application loading speed and Automation Script Execution speed are not matching)
+	-EmptyListException
+-It will check if the desired element is present on the webpage or not.
+-the time is given in seconds
+-the moment it sees the desired element it will click on it ASAP.
+-It is also called Intelligent Wait bcause it checks for the desired elemnt every 500ms.
+-the waitnig is called time interval,wait frequency,foli period.
+-if we want to change the time interval we have to go with fluent wait.
+-It is only applied for findElement or findElements and wont affect other code
+-It saves time by using cycles
+-Its works on condition
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2]Explicit wait-
+-It is compulsary that we use seconds not milli not mintues 
+-we write 2 lines of code for explicit wait
+-we get TimeOutException 
+-It is used when we are not using findElement or findElements
+-ExplicitWait  works on Conditions/Predicate
+-If conditon is satisfied then only it will leave the control
+-if the condition is not satisfied it will give TimeOutException
+-works in cycles of waiting time/poll period of 500ms
+-it is also known as intelligent wait.
+
+Step1
+-we need to create the object of WebDriverWait class
+	-WebDriverWait w = new WebDriverWait(c,Duration.ofSeconds(10));
+		We have to provide some parameters-	1)time
+						2)Object refernece
+Step2
+-we have to call a method called until().(We create object of WebDriverWait class for the until method )
+
+w.until(ExpectedConditions.titleIs("expectedtitle/vtiger")) //this isss where explict wait applies
+
+Step3
+-we have to pass the predicate funcitons
+
+Used for validation of getCurrentUrl() and getTitle().
+
+Example-WebDriverWait waits=new WebDriverWait(c,Duration.ofSeconds(10));
+	waits.until(ExpectedConditions.urlToBe(expected));
+Methods In ExpectedCondition
+titleIs
+titleContains
+urlToBe
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Thread.sleep()
+-It is a BLIND WAIT and doesnot check the if an element is present or not.
+-the time is given in milliseconds.
+-It will wait till the time given.
+-It is applied only for  a single line.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ENUMUATION(ENUM)
+we are using 3 types of ENUM(it is a java component which holds groups of constants(fixed or cannot be changed))
+TimeUnit(Not used since selenium 4. We could apply 7 types of waits before selenium 4)
+Duration(ofSecconds,ofMilliSeconds)
+Keys(delete,backspace,all the buttons on the keyboard)
+Duration is an ENUM in Selenium 4
+TimeUnit was the ENUM used in Selenium 3
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Fluent wait- just to change the poling period.. 500milliseconds to 400miliseconds with the help of Fluent wait.
+here the user has complete control of the parameters and polling period/Wait frequency/Time Interval.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PageLoadTimeOut()- Only applied for two methods - 1)get()
+				                2)navigate.to()
+
+By default both the methods have set infinite no. of time delay( wait )
+To cutDown the delay we have to use the concept called pageLoadTimeout().
+
+
+
+
+

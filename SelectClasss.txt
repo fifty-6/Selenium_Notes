@@ -1,0 +1,25 @@
+SELECT CLASS
+-Its a concrete class in Selenium package
+-To Handle Dropdowns- 1)Single List dropDown  [We can select only one in the dropdown]
+		       2) MultiList DropDown	[We can select mutliple dropdown]
+
+-Only Elements having <Select> tag can use used by Select Class else go for sendKeys()
+-It is used to select Elements & Deselect Elements
+
+1. getOptions()	[Used in single List dropdown,  To get multiple Elements we use getOption, Complusary use forEach loop]	
+2. isMultiple()	[Used in single List dropdown,  Used to check weather its a singleList or multiList,ReturnType-boolean]
+3.Select ByVisableText()	[Used in single List dropdown,  Used for selecting]
+4.Select by value()		[Used in single List dropdown,	 Used for selecting]
+5.Select By inddex()		[Used in single List dropdown,  Used for selecting]
+6.get firstSelectedOption()  	[Most of time used in multi-List dropdown]
+7.getAllSelectedOptions()
+
+To select 3 methodsare there 
+To deSelect 3 methods are there
+
+
+STEPS
+
+1. Create Object of Select class and import
+2.In the select Constructor pass the targeted webElement
+3.call the methods

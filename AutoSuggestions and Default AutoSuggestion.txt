@@ -1,0 +1,8 @@
+AutoSuggestion- It is the suggestion given by the webpage related to the passed value
+Default AutoSuggestion- It is the suggestions provided without passing any values
+
+Steps-
+-Check it is covering all Autosuggestion
+-Find common Attributes
+-Find What is not autosuggestion
+-use and not operation to remove the extra Element 

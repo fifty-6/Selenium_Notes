@@ -1,0 +1,7 @@
+IF ELSE				| EXPLICIT WAIT
+1)Next line will be executed even if the	|  1) The next line will be executed if the condition is satisfied 
+condition is not satisfied		|	
+2)If condition is satisfied if portion 	|    2)Next line will not be executed if the conditon is satisfied
+will be executed                   		|
+3)If condition is not satisfied Else portion	|   3)If conditon is not satisfied It will throw TIMEOUTEXCEPTION anad next line will 	   will be execcuted			|       be skipped
+ 				  

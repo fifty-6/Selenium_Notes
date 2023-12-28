@@ -1,0 +1,23 @@
+Elements-
+-To search multiple Elements in the webpage we use find Elements
+-return type- List<WebElement>
+-Exception- EmptyList<WebElement>
+-When we perfoem action on WebElement By using findElement() it perform action on the Fisrst matching Elements
+
+Best Examples- 	1)AutoSuggestions
+		2)DefaultAutoSuggestions
+	
+-We use concept of AND, OR , NOT
+
+Threre are Hidden Elements aswell which will give space when printed
+
+Steps for find multiple Elements-
+	1)Find the common or similarity between all the elements.
+		-Inspect any Element
+		-move in backward Direction until we get all the element source Code.
+		-find Common between all the element
+
+
+Another Way-
+Go for Parent and write tagname of the child after /
+ex- //div[@class='sub-header-wrapper']/div

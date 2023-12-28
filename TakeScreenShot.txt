@@ -1,0 +1,39 @@
+<TakesScreenshot> Interface
+
+-To take ScreenShot of Webpage* & WebElement(In intervew How to take screenshot of the webpage is asked frequently)
+-METHODS-
+	-getScreenshotAs()
+-for adding to the defectReport
+-For analysis of TestScriptFail (ItestListner Is a tool whicih takes screenshot of TestScriptfailed element)
+
+-TestNG is used for generating the report which will be submitted
+-A .jar file is used to create a folder automatically which is ApacheCommonI/O
+
+HOW TO TAKE SCREENSHOT(WEBPAGE)-
+1]Downcasting - TakesScreenshotAs ts=( TakesScreenshotAs) driver;
+2]To access and Store these three types we have to use a Interface called Output.
+	File tempfile = ts.getScreenshotAs(OutputType.FILE)
+		-FILE
+		-Base64
+		-Byte
+	
+3]getAbsolutepath- System.out.println(tempfile.getAbsolutePath());
+	-to locate the Screenshot in the system.
+	
+4]Thread.sleep(90000) (TEMPORARY SOLUTION)
+	-DeleteOnExit() will delete the screenshot after the program exits.
+	-To overcome this problem we have to use thread.sleep so that the program runs for a longer time.
+	-It is a temporary Solution
+s
+5](PERMANENT SOLUTION) 
+	-Manually create a folder inside Project 
+	-Create an object of FILE 
+	-File destinationfile = new File("./{foldername}/{SSname.jpg/png}");
+	-To move the file from the temporary location to permanent Location
+		-tempfile.renameTo(destinationfile);
+
+6]Refresh the Project
+
+To create a folder Automatically
+-Fileutils.copyFile(source file,destination file)
+	

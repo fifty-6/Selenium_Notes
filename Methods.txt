@@ -1,0 +1,21 @@
+AutoIT-
+	Three methods- 	1) ControlFocus ( "title", "text", "controlID" ) ---------------------Used to keep control on the path tf
+			2)ControlSetText ( "title", "text", "controlID", "new text")--------Writing the path
+			3)ControlClick ( "title", "text", "controlID" ) -------------------------Used to click on the Open button
+				
+
+
+It is a open source GUI testing tool which was developed to automate StandAlone applications
+It is a HLL programming language & has a lot of library methods through which we can automate wwindow app and it follow vb(Visual basic used in qtp) scripting like syntax
+
+-We can only use it in windows. it cannot be used 
+-It create .exe file extension after compilling with same name
+-before compilling it had extension as .au3
+-We need to use .exe file in selenium
+-we have to call class called Runtime
+-call method getRuntime().exec(String commad)
+
+
+
+
+			

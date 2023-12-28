@@ -1,0 +1,18 @@
+Actions CLASS
+21 methods
+
+Actions class are use for eveything we can do using the mouse.it is used to perform mouse gestures
+
+*Select class are used for handling dropdown*
++using sendKeys also we can handle dropDowns*
+build()-
+
+Used to build the method which are stored in the array as all the methods like-a.click etc these are stored in an array 
+
+To do someactions we have to compulsary use a.perform
+
+build methods were used to call in the selenium in the 3 series
+
+we use to build the menthid using build method.
+
+from seleinum 4.11 inside the perform() we have build method already so it wont work if written explicitly.
