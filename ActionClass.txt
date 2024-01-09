@@ -31,6 +31,10 @@ METHODS()
 15)MoveToElement(WebElement target)
 16)MoveByOffset(intXoffset,intYoffset)
 17)MoveToElement(WebElement,intXoffset,intYoffset)
+18)Release()
+19)Release(WebElement Targeted)
+20)ClickAndHold()
+21)ClickAndHold(WebElementTargeted)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 moveToElement(WebElement targeted)
 -Move the mouse over to the targeted Element.
@@ -60,6 +64,11 @@ doubleClick()
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 doubleClick(targetedd WebElement)
 -doubleclicks on the targeted Element
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+perform()- to perfom the actions in a webElement using Action class.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+build() - it was used in Selenium 3 series and in 4 series it is no longer compulsory
 
 
 
