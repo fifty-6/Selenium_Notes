@@ -1,0 +1,2 @@
+FileInputStream- to fetch the data from external file
+FileOutputStream- To write the data in external file.(It is mandatory to create object of This if we want to write something in an External file and write())
